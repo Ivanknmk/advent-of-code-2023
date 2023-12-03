@@ -3,11 +3,6 @@
 (require rackunit)
 (require racket/port)
 
-(define numbers-dict
-  (list "one" "two" "three"
-        "four" "five" "six"
-        "seven" "eight" "nine"))
-
 (define (find-calibration-value-in text-line)
   (let* ([list-of-chars   (string->list text-line)]
          [numbers-in-list (filter char-numeric? list-of-chars)]
